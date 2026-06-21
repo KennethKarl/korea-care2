@@ -1,0 +1,50 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+        # 값은 repo Secrets 에 등록 (미설정 시 빈 문자열 = 분석/폼 no-op, 빌드 무해)
+        # 자세한 내용: docs/SERVER-REQUEST.md
+        env:
+          # github.io 서브경로 배포 → /korea-care2/ (CNAME 제거됨)
+          VITE_BASE: /korea-care2/
+          VITE_API_BASE: ${{ secrets.VITE_API_BASE }}
+          VITE_GA4_ID: ${{ secrets.VITE_GA4_ID }}
+          VITE_META_PIXEL_ID: ${{ secrets.VITE_META_PIXEL_ID }}
+          VITE_CLARITY_ID: ${{ secrets.VITE_CLARITY_ID }}
+          VITE_CHANNEL_PLUGIN_KEY: ${{ secrets.VITE_CHANNEL_PLUGIN_KEY }}
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

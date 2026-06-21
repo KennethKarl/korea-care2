@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>원본 ↔ SRS 요구사항 정의서 매칭표</title>
+<style>
+  :root{
+    --blue:#1c5de3; --blue-bg:#eef3ff; --green:#1a8f4c; --gray:#6b7280;
+    --line:#e5e7eb; --red:#d92d20; --red-bg:#fef3f2; --amber:#b45309; --amber-bg:#fffbeb;
+    --bg:#f7f8fa; --card:#fff; --ink:#1f2430;
+  }
+  *{box-sizing:border-box}
+  body{font-family:'Pretendard',-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo',sans-serif;
+    margin:0;background:var(--bg);color:var(--ink);line-height:1.5;font-size:14px}
+  .wrap{max-width:1120px;margin:0 auto;padding:32px 20px 80px}
+  h1{font-size:24px;margin:0 0 4px}
+  .sub{color:var(--gray);margin:0 0 24px;font-size:13px}
+  .cards{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px}
+  .card{flex:1;min-width:150px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+  .card .n{font-size:28px;font-weight:800;letter-spacing:-.5px}
+  .card .l{color:var(--gray);font-size:12px;margin-top:2px}
+  .card.blue .n{color:var(--blue)} .card.green .n{color:var(--green)} .card.red .n{color:var(--red)}
+  .note{background:var(--amber-bg);border:1px solid #fde68a;border-radius:10px;padding:12px 16px;font-size:12.5px;color:#7c5e10;margin-bottom:24px}
+  .legend{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--gray);margin-bottom:16px}
+  .legend span{display:inline-flex;align-items:center;gap:5px}
+  .dot{width:10px;height:10px;border-radius:3px;display:inline-block}
+  .group{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-bottom:14px;overflow:hidden}
+  .ghead{display:flex;align-items:center;gap:10px;padding:13px 18px;border-bottom:1px solid var(--line);background:#fafbfc}
+  .req{font-weight:800;color:var(--blue);font-size:13px;white-space:nowrap}
+  .gname{font-weight:700;font-size:14px}
+  .cls{margin-left:auto;font-size:11px;padding:2px 9px;border-radius:20px;background:var(--blue-bg);color:var(--blue);white-space:nowrap}
+  .cls.admin{background:#eafaf0;color:var(--green)} .cls.hosp{background:#fff4e6;color:var(--amber)}
+  .cls.auth{background:#fef9e7;color:#a16207} .cls.my{background:#fdeee6;color:#b45309}
+  .cls.link{background:#f1f1f4;color:#555} .cls.seo{background:var(--red-bg);color:var(--red)}
+  .gbody{padding:12px 18px 14px}
+  .canon{font-size:12.5px;margin-bottom:8px}
+  .canon b{color:var(--green)}
+  .srcs{display:flex;flex-wrap:wrap;gap:6px}
+  .chip{font-size:11.5px;background:#f3f5f9;border:1px solid #e3e7ef;border-radius:7px;padding:3px 8px;color:#3a4252}
+  .empty{font-size:12px;color:var(--gray);font-style:italic}
+  .cnt{margin-left:auto;font-size:11px;color:var(--gray)}
+  .row-derived{opacity:.78}
+  .miss{background:var(--red-bg);border-color:#fecdca}
+  .miss .ghead{background:#fff5f4;border-bottom-color:#fecdca}
+  .miss .req{color:var(--red)}
+  .sec-title{font-size:13px;font-weight:800;color:var(--gray);margin:26px 0 10px;letter-spacing:.3px;text-transform:uppercase}
+  footer{margin-top:32px;font-size:11.5px;color:var(--gray);border-top:1px solid var(--line);padding-top:16px}
+  code{background:#eef1f5;padding:1px 5px;border-radius:4px;font-size:11px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>원본 ↔ SRS 요구사항 정의서 매칭표</h1>
+  <p class="sub">원본 <code>글로벌 웹사이트 요구사항정의서 (표 형)</code> → 최종 정리 <code>SRS 요구사항 정의서</code> · 화면 단위 통합(consolidate) 매핑 · 생성 2026-06-19</p>
+
+  <div class="cards">
+    <div class="card blue"><div class="n">107</div><div class="l">원본 행 (열거 기준)</div></div>
+    <div class="card green"><div class="n">43</div><div class="l">SRS 행 (REQ-01~43)</div></div>
+    <div class="card"><div class="n">27</div><div class="l">최신 통합행(38394)</div></div>
+    <div class="card red"><div class="n">1</div><div class="l">미매칭 화면(유저 관리)</div></div>
+  </div>
+
+  <div class="note">
+    <b>구조 설명.</b> 원본 DB는 한 화면을 <b>영역구분별 여러 행</b>으로 쪼개 두었고, 과거 드래프트 중복까지 섞여 총 107개 행입니다(27개 최신 통합행 + 80개 레거시/섹션). SRS는 이를 <b>화면 1개 = REQ 1행</b>으로 통합한 43개 행입니다. 따라서 다수 원본 행 → 1개 REQ로 합쳐집니다(1:N 통합). 아래는 <b>원본 모든 행이 어느 REQ로 들어갔는지</b>를 화면별로 묶은 것입니다.
+    <br>※ 원본 수치는 Notion MCP에 전체-목록 API가 없어 검색 기반 열거(±소수 오차 가능). 화면 커버리지는 확정.
+  </div>
+
+  <div class="legend">
+    <span><span class="dot" style="background:#1a8f4c"></span>최신 통합행(38394, SRS 직접 대응)</span>
+    <span><span class="dot" style="background:#c9cfdb"></span>레거시/섹션 행(통합되어 흡수)</span>
+    <span><span class="dot" style="background:#d92d20"></span>미매칭(SRS에 없음)</span>
+  </div>
+
+  <div id="app"></div>
+
+  <footer>
+    파생/공통 REQ(법적 고지·연동 12종·SEO·계측·봇보호)는 특정 원본 화면이 아니라 화면 간 연동/인프라를 별도 요구사항으로 분리한 것이라 대응 원본 행이 없습니다. · 원본 행 ID는 식별 앞자리(예: <code>8169-ba17</code>)로 표기.
+  </footer>
+</div>
+
+<script>
+const DATA = [
+ {req:'REQ-01',name:'메인/홈',cls:'고객 웹사이트',ct:'web',canon:'38394 메인/홈 (8175)',
+  src:['홈·히어로(37694)','홈·상단메뉴(8073)','홈·CTA(8024)','홈·푸터(80ba)','홈·진료과 리스트(80f7)','홈·비포/애프터(806c)','홈·세이프닥 여정(8015)','홈·FAQ(8034)','홈·리뷰(8054)','홈·세이프닥의 가치(80c3)','홈·블로그(80df)','홈·히어로 검색(8076-8a55)']},
+ {req:'REQ-02',name:'병원 리스트/상세',cls:'고객 웹사이트',ct:'web',canon:'38394 병원 리스트/상세 (8169-ba17)',
+  src:['병원리스트·상단카피(80f5)','병원리스트·필터(8076-9e13)','병원리스트·리스트(80b6)','병원상세·상단메인(8002)','병원상세·병원소개(8062)','병원상세·시술리스트(80e3)','병원상세·위치/운영시간(80bb)','병원상세·예약CTA(80bc)','병원상세·리뷰(8037)','병원상세·언어라벨(8063)','병원상세·진료과라벨(80d9)','병원상세·내부사진(38194-8003)']},
+ {req:'REQ-03',name:'시술 리스트',cls:'고객 웹사이트',ct:'web',canon:'38394 시술 리스트 (810c)',
+  src:['시술리스트·페이지명(37694-80ee)','시술리스트·필터(37d94-8048)','시술리스트·리스트(37d94-8025)']},
+ {req:'REQ-04',name:'시술 상세',cls:'고객 웹사이트',ct:'web',canon:'38394 시술 상세 (811f)',
+  src:['시술상세·설명(37d94-80a7)','시술상세·포함항목(37694-80ec)','시술상세·소요시간(37d94-80c8)','시술상세·준비사항(37d94-80aa)','시술상세·진행순서(37d94-80b3)','시술상세·안내사항(37d94-8088)','시술상세·다른시술(37d94-806e)','시술상세·비포/애프터(37694-8024-8e10)']},
+ {req:'REQ-05',name:'리뷰',cls:'고객 웹사이트',ct:'web',canon:'38394 리뷰 (81fe)',
+  src:['리뷰·페이지명(38094-800a)','리뷰·필터(38094-8053)','리뷰·카드(38094-80f4)']},
+ {req:'REQ-06',name:'비포/애프터',cls:'고객 웹사이트',ct:'web',canon:'38394 비포/애프터 (8106)',
+  src:['비포/애프터·페이지명(37694-8002-9eeb)','비포/애프터·필터(37d94-8096)','비포/애프터·카드(37d94-80ac)']},
+ {req:'REQ-07',name:'블로그',cls:'고객 웹사이트',ct:'web',canon:'38394 블로그 리스트/상세 (81c5)',
+  src:['블로그·페이지명(38094-8047)','블로그·필터(38094-8078)','블로그·결과(38094-8048)']},
+ {req:'REQ-08',name:'FAQ',cls:'고객 웹사이트',ct:'web',canon:'38394 FAQ (81f0)',
+  src:['FAQ·페이지명(37694-80dc)','FAQ·필터(38094-80fa)','FAQ·결과(38094-804e)']},
+ {req:'REQ-09',name:'상담/문의(Contact)',cls:'고객 웹사이트',ct:'web',canon:'38394 상담/문의(Contact) (8157-b1a2)',
+  src:['컨택어스·설문폼(37c94-801a)']},
+ {req:'REQ-10',name:'예약 신청',cls:'고객 웹사이트',ct:'web',canon:'38394 예약 신청 (81af)',
+  src:['체크아웃·예약정보(38094-80ed)','체크아웃·환자정보(37694-8057)','체크아웃·부가상품(38094-8079)','체크아웃·비고(38194-805f)']},
+ {req:'REQ-11',name:'About / How It Works',cls:'고객 웹사이트',ct:'web',canon:'38394 About/How It Works (8104)',
+  src:[],emptyNote:'레거시 섹션행 없음(최신 통합행만 존재)'},
+ {req:'REQ-12',name:'법적 고지(Legal)',cls:'고객 웹사이트',ct:'web',canon:'—',derived:true,
+  src:[],emptyNote:'원본 화면 행 없음 — 프론트 LegalPage 기반 파생'},
+ {req:'REQ-13',name:'회원가입/로그인',cls:'인증/계정',ct:'auth',canon:'38394 회원가입/로그인 (8179)',
+  src:['로그인(37694-808e)','회원가입(37694-802e)']},
+ {req:'REQ-14',name:'고객정보(프로필)',cls:'인증/계정',ct:'auth',canon:'38394 고객정보(프로필) (819c)',
+  src:['마이페이지_고객정보(37694-8038)']},
+ {req:'REQ-15',name:'예약내역',cls:'마이페이지',ct:'my',canon:'38394 마이페이지-예약내역 (811b)',
+  src:['예약내역 리스트(38094-80f7)','예약내역 상세(38094-8027)']},
+ {req:'REQ-16',name:'장바구니',cls:'마이페이지',ct:'my',canon:'38394 마이페이지-장바구니 (8191)',
+  src:['장바구니·페이지명(38094-8096)','장바구니·내역(38094-80e1)']},
+ {req:'REQ-17',name:'취소요청',cls:'마이페이지',ct:'my',canon:'38394 마이페이지-취소요청 (8169-b00f)',
+  src:[],emptyNote:'레거시 섹션행 없음'},
+ {req:'REQ-18',name:'리뷰 작성',cls:'마이페이지',ct:'my',canon:'38394 마이페이지-리뷰작성 (819a)',
+  src:[],emptyNote:'레거시 섹션행 없음'},
+ {req:'REQ-19',name:'어드민-병원/시술 관리',cls:'운영자 어드민',ct:'admin',canon:'38394 어드민-병원/시술 관리 (819e)',
+  src:['병원관리·리스트(38194-801d)','병원관리·필터(38194-80d9)','병원등록·기본정보(38194-8099)','병원등록·계약정보(38194-806c)','병원등록·이미지(38194-80df-ba09)','시술관리·리스트(38194-80bd)','시술관리·필터(38194-80d7)','시술등록·대분류(37694-8093)','시술등록·시술(37694-807e)','시술등록·검진(37694-80e2)']},
+ {req:'REQ-20',name:'어드민-블로그 관리',cls:'운영자 어드민',ct:'admin',canon:'38394 어드민-블로그 관리 (819f)',
+  src:['블로그 관리(38094-809e)']},
+ {req:'REQ-21',name:'어드민-FAQ 관리',cls:'운영자 어드민',ct:'admin',canon:'38394 어드민-FAQ 관리 (8176-8df9)',
+  src:['FAQ 관리(38094-80be)']},
+ {req:'REQ-22',name:'어드민-예약 관리',cls:'운영자 어드민',ct:'admin',canon:'38394 어드민-예약 관리 (8194)',
+  src:['예약내역관리(37c94-80e0)','예약내역관리·필터(38094-80b8)','예약내역관리·리스트(38194-800b)','방문 확인(38094-806d)']},
+ {req:'REQ-23',name:'어드민-리뷰 관리',cls:'운영자 어드민',ct:'admin',canon:'38394 어드민-리뷰 관리 (8176-aa3d)',
+  src:[],emptyNote:'레거시 섹션행 없음'},
+ {req:'REQ-24',name:'어드민-정산 내역',cls:'운영자 어드민',ct:'admin',canon:'38394 어드민-정산 내역 (8157-b1e7)',
+  src:['정산관리·필터(38194-80d5)','정산관리·리스트(38194-80df-a733)','정산내역관리(38194-8036)']},
+ {req:'REQ-25',name:'어드민-채팅/문의 접수',cls:'운영자 어드민',ct:'admin',canon:'38394 어드민-채팅/문의 접수 (8143)',
+  src:[],emptyNote:'레거시 섹션행 없음'},
+ {req:'REQ-26',name:'병원관리자-글로벌 예약 탭',cls:'병원 관리자',ct:'hosp',canon:'38394 병원관리자-글로벌 예약 탭 (818f)',
+  src:[],emptyNote:'레거시 섹션행 없음(예약내역관리는 REQ-22로 귀속)'},
+ {req:'REQ-27',name:'병원관리자-금액 입력',cls:'병원 관리자',ct:'hosp',canon:'38394 병원관리자-금액 입력 (817f)',
+  src:[],emptyNote:'레거시 섹션행 없음'},
+ {req:'REQ-42',name:'공통 — 상담 채팅 위젯(ChannelTalk)',cls:'공통/SEO',ct:'seo',canon:'38394 상담 채팅 (8119)',
+  src:[]},
+ {req:'REQ-28~39',name:'[연동] 사이트 간 연동 12종',cls:'사이트 연동',ct:'link',canon:'—',derived:true,
+  src:[],emptyNote:'개별 화면 아님 — 화면 간 연동을 별도 요구사항으로 분리(파생)'},
+ {req:'REQ-40·41·43',name:'공통 — SEO/GEO · 마케팅 계측 · 봇/스팸 보호',cls:'공통/SEO',ct:'seo',canon:'—',derived:true,
+  src:[],emptyNote:'인프라/공통 — 원본 화면 행 없음'},
+];
+const MISS = {name:'유저 관리 (운영자 어드민 회원관리)',cls:'운영자 어드민',
+  src:['유저관리·리스트(38094-804b)','유저관리·필터(38194-8040)'],
+  why:'SRS에 대응 REQ 없음 — 노출정보(가입일·full name·추천코드·추천인·여권·병력 등) + 비고 정책 「정상적인 추천인 코드 입력 시 5% 할인권 지급」 이 통째로 누락. (REQ-14 고객정보는 고객 본인 마이페이지라 별개)'};
+
+const app=document.getElementById('app');
+function chiprow(arr){return arr.length?`<div class="srcs">${arr.map(s=>`<span class="chip">${s}</span>`).join('')}</div>`:'';}
+function block(d){
+  const cnt=(d.canon&&d.canon!=='—'?1:0)+d.src.length;
+  return `<div class="group ${d.derived?'row-derived':''}">
+    <div class="ghead"><span class="req">${d.req}</span><span class="gname">${d.name}</span>
+      <span class="cls ${d.ct}">${d.cls}</span></div>
+    <div class="gbody">
+      ${d.canon&&d.canon!=='—'?`<div class="canon">최신 통합행: <b>${d.canon}</b></div>`:''}
+      ${d.src.length?chiprow(d.src):(d.emptyNote?`<div class="empty">${d.emptyNote}</div>`:'')}
+      <div class="cnt">원본 ${cnt}행 → 이 REQ로 통합</div>
+    </div></div>`;
+}
+app.innerHTML =
+  `<div class="sec-title">화면 단위 REQ (원본 화면 → SRS)</div>`+
+  DATA.filter(d=>!d.derived).map(block).join('')+
+  `<div class="sec-title">파생 · 공통 REQ (대응 원본 화면 없음)</div>`+
+  DATA.filter(d=>d.derived).map(block).join('')+
+  `<div class="sec-title" style="color:#d92d20">⚠️ 미매칭 — 원본에 있으나 SRS에 없음</div>`+
+  `<div class="group miss"><div class="ghead"><span class="req">없음</span>
+     <span class="gname">${MISS.name}</span><span class="cls admin">${MISS.cls}</span></div>
+   <div class="gbody">${chiprow(MISS.src)}
+     <div class="empty" style="color:#b42318;font-style:normal;margin-top:8px">${MISS.why}</div>
+     <div class="cnt">원본 2행 → SRS 대응 없음</div></div></div>`;
+</script>
+</body>
+</html>

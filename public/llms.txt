@@ -1,0 +1,38 @@
+# KoreCare
+
+> KoreCare arranges world-class medical treatment in South Korea for members of US health insurers. The insurer covers the procedure; KoreCare manages everything around it — care-plan matching, flights and visa, airport pickup, a dedicated English interpreter and coordinator, hospital-adjacent recovery accommodation, and follow-up coordination with the patient's US physician.
+
+## What KoreCare is
+
+- A managed medical-travel service for US insurance members referred for treatment in Korea.
+- Partners only with internationally accredited (e.g. JCI) tertiary hospitals and clinics in Korea.
+- Covered programs are confirmed with the member's insurer after a short records review before any commitment.
+
+## Specialties / Programs
+
+- Oncology — proton therapy, robotic cancer surgery, targeted therapy.
+- Orthopedics & Spine — minimally-invasive / endoscopic spine procedures.
+- Cardiac Surgery — coronary bypass and hybrid cardiac programs.
+- Full Health Screening — executive deep screening (whole-body MRI + PET-CT).
+
+## Key pages
+
+- Home / Programs: https://global.safedoc.io/
+- Treatments: https://global.safedoc.io/programs
+- How It Works: https://global.safedoc.io/how-it-works
+- Reviews: https://global.safedoc.io/reviews
+- FAQ: https://global.safedoc.io/faq
+- Contact: https://global.safedoc.io/contact
+
+## How it works (5 steps)
+
+1. Care plan & match — a covered program is matched to the member's records.
+2. Travel arranged — flights, visa, and airport pickup for the member and a companion.
+3. In-Korea support — dedicated English interpreter and coordinator.
+4. Recovery stay — hospital-adjacent accommodation booked.
+5. US aftercare — follow-up coordinated with the member's home physician.
+
+## Notes
+
+- Languages: English (primary). Service audience: United States; treatment location: South Korea.
+- Prices shown are estimates; final out-of-pocket is confirmed with the insurer after records review.
