@@ -18,6 +18,10 @@
   <url><loc>https://kennethkarl.github.io/korea-care2/service/accommodation</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://kennethkarl.github.io/korea-care2/service/association</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://kennethkarl.github.io/korea-care2/service/health-checkup</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kennethkarl.github.io/korea-care2/service/health-checkup/comprehensive</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kennethkarl.github.io/korea-care2/service/health-checkup/hospital-based</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kennethkarl.github.io/korea-care2/service/health-checkup/mri-scan</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kennethkarl.github.io/korea-care2/service/health-checkup/whole-mri</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://kennethkarl.github.io/korea-care2/service/revital</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://kennethkarl.github.io/korea-care2/service/tour</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://kennethkarl.github.io/korea-care2/service/transportation</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
