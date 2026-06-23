@@ -1,6 +1,6 @@
 {
-  "_client-Ch_UxFbk.js": {
-    "file": "assets/client-Ch_UxFbk.js",
+  "_client-CaiY158k.js": {
+    "file": "assets/client-CaiY158k.js",
     "name": "client",
     "isDynamicEntry": true,
     "imports": [
@@ -8,12 +8,12 @@
     ]
   },
   "index.html": {
-    "file": "assets/app-DsvoISLM.js",
+    "file": "assets/app-9mWu4GJI.js",
     "name": "app",
     "src": "index.html",
     "isEntry": true,
     "dynamicImports": [
-      "_client-Ch_UxFbk.js"
+      "_client-CaiY158k.js"
     ],
     "css": [
       "assets/app-3CC7oKyK.css"
