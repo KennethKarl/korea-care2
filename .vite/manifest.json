@@ -1,6 +1,6 @@
 {
-  "_client-DVDjt39j.js": {
-    "file": "assets/client-DVDjt39j.js",
+  "_client-DNidjYxf.js": {
+    "file": "assets/client-DNidjYxf.js",
     "name": "client",
     "isDynamicEntry": true,
     "imports": [
@@ -8,12 +8,12 @@
     ]
   },
   "index.html": {
-    "file": "assets/app-s6lhJzzC.js",
+    "file": "assets/app-DzZX9hOd.js",
     "name": "app",
     "src": "index.html",
     "isEntry": true,
     "dynamicImports": [
-      "_client-DVDjt39j.js"
+      "_client-DNidjYxf.js"
     ],
     "css": [
       "assets/app-3CC7oKyK.css"

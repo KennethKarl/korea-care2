@@ -13,10 +13,21 @@
 - Comprehensive Check-up — USD 300. Blood/urine panel, abdominal ultrasound, chest X-ray & ECG, optional gastroscopy.
 - Whole Body MRI Check-up — USD 2,000. Whole-body + brain/spine MRI, MRA vascular screening, radiologist reading.
 - Hospital-based Check-up — custom programs at top tertiary hospitals (PET-CT add-on, VIP option).
+- MRI & CT Scan — targeted scans from USD 349. MRI Scan (USD 999), MRI with Spine (USD 1,699), MRI with Skeletal & Neurological Assessment (USD 3,999), Heart CT / coronary-artery-calcium score (USD 349), Lung CT (USD 399). No-radiation MRI; low-dose CT.
 
 ## Revital (specialized treatments)
 
 - Ophthalmology (SMILE LASIK & vision correction), Dental, Plastic Surgery, Dermatology, Hair Loss, Interventional Radiology, Urology.
+
+## Providers (partner hospitals & clinics)
+
+- Samsung Medical Center — Gangnam-gu, Seoul. Rating 4.9 (1,482 reviews). Oncology, cardiac care, executive health. JCI, ISO 9001, KAHF. English support, international ward.
+- Asan Medical Center — Songpa-gu, Seoul. Rating 4.8 (1,218). Korea's largest tertiary hospital; liver transplant, cardiothoracic surgery, executive screening. JCI, ISO 9001. English support, international ward.
+- Severance Hospital (Yonsei) — Seodaemun-gu, Seoul. Rating 4.8 (982). Ophthalmology, robotic surgery, women's health. JCI, ISO 9001, KAHF. English support, international ward.
+- Seoul St. Mary's Hospital — Seocho-gu, Seoul. Rating 4.7 (614). Hematology, bone-marrow transplant, maternal-fetal medicine. JCI, KAHF. English support.
+- JK Plastic Surgery Center — Gangnam-gu, Seoul. Rating 4.9 (1,604). Boutique plastic surgery for international patients since 2000. ISAPS Member, KSAPS. English support, in-house interpreter.
+- Oracle Dental Clinic (Gangnam) — Gangnam-gu, Seoul. Rating 4.8 (486). Implants, digital veneers, clear-aligner ortho. KDA. English support.
+- Seoul National University Hospital — Jongno-gu, Seoul. Rating 4.7 (721). Public tertiary hospital with international healthcare center and rare-disease clinic. JCI, KAHF. English support, international ward.
 
 ## Why Korea
 
@@ -29,7 +40,9 @@
 - Home: https://global.safedoc.io/
 - Service: https://global.safedoc.io/service
 - Health Check-up: https://global.safedoc.io/service/health-checkup
+- MRI & CT Scan: https://global.safedoc.io/service/health-checkup/mri-scan
 - Revital: https://global.safedoc.io/service/revital
+- Providers (partner hospitals): https://global.safedoc.io/providers
 - FAQ: https://global.safedoc.io/faq
 - Contact: https://global.safedoc.io/contact
 - Blog: https://global.safedoc.io/blog
