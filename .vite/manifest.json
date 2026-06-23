@@ -1,6 +1,6 @@
 {
-  "_client-BfS1JYFO.js": {
-    "file": "assets/client-BfS1JYFO.js",
+  "_client-CRox-kl7.js": {
+    "file": "assets/client-CRox-kl7.js",
     "name": "client",
     "isDynamicEntry": true,
     "imports": [
@@ -8,12 +8,12 @@
     ]
   },
   "index.html": {
-    "file": "assets/app-DGFsFA8U.js",
+    "file": "assets/app-DsYOI9Xt.js",
     "name": "app",
     "src": "index.html",
     "isEntry": true,
     "dynamicImports": [
-      "_client-BfS1JYFO.js"
+      "_client-CRox-kl7.js"
     ],
     "css": [
       "assets/app-3CC7oKyK.css"
