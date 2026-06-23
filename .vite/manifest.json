@@ -1,6 +1,6 @@
 {
-  "_client-CO-AR-uI.js": {
-    "file": "assets/client-CO-AR-uI.js",
+  "_client-CtZyT030.js": {
+    "file": "assets/client-CtZyT030.js",
     "name": "client",
     "isDynamicEntry": true,
     "imports": [
@@ -8,12 +8,12 @@
     ]
   },
   "index.html": {
-    "file": "assets/app-Bo7vtUeE.js",
+    "file": "assets/app-Bfy3L71M.js",
     "name": "app",
     "src": "index.html",
     "isEntry": true,
     "dynamicImports": [
-      "_client-CO-AR-uI.js"
+      "_client-CtZyT030.js"
     ],
     "css": [
       "assets/app-3CC7oKyK.css"
