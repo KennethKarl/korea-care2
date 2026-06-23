@@ -1,6 +1,6 @@
 {
-  "_client-r3gpF0DF.js": {
-    "file": "assets/client-r3gpF0DF.js",
+  "_client-0xeJUEUT.js": {
+    "file": "assets/client-0xeJUEUT.js",
     "name": "client",
     "isDynamicEntry": true,
     "imports": [
@@ -8,12 +8,12 @@
     ]
   },
   "index.html": {
-    "file": "assets/app-6JId5qJL.js",
+    "file": "assets/app-CIgh-qZD.js",
     "name": "app",
     "src": "index.html",
     "isEntry": true,
     "dynamicImports": [
-      "_client-r3gpF0DF.js"
+      "_client-0xeJUEUT.js"
     ],
     "css": [
       "assets/app-3CC7oKyK.css"
