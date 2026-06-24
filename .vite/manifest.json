@@ -1,6 +1,6 @@
 {
-  "_client-Bj2Grtie.js": {
-    "file": "assets/client-Bj2Grtie.js",
+  "_client-Cgx-MsVD.js": {
+    "file": "assets/client-Cgx-MsVD.js",
     "name": "client",
     "isDynamicEntry": true,
     "imports": [
@@ -8,12 +8,12 @@
     ]
   },
   "index.html": {
-    "file": "assets/app-D9eX2fTf.js",
+    "file": "assets/app-CeZPriwh.js",
     "name": "app",
     "src": "index.html",
     "isEntry": true,
     "dynamicImports": [
-      "_client-Bj2Grtie.js"
+      "_client-Cgx-MsVD.js"
     ],
     "css": [
       "assets/app-3CC7oKyK.css"
