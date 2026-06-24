@@ -1,6 +1,6 @@
 {
-  "_client-lbazHrh1.js": {
-    "file": "assets/client-lbazHrh1.js",
+  "_client-CAK_k9mc.js": {
+    "file": "assets/client-CAK_k9mc.js",
     "name": "client",
     "isDynamicEntry": true,
     "imports": [
@@ -8,12 +8,12 @@
     ]
   },
   "index.html": {
-    "file": "assets/app-B-K1MuvY.js",
+    "file": "assets/app-DYw8j8FC.js",
     "name": "app",
     "src": "index.html",
     "isEntry": true,
     "dynamicImports": [
-      "_client-lbazHrh1.js"
+      "_client-CAK_k9mc.js"
     ],
     "css": [
       "assets/app-3CC7oKyK.css"
